@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page session="true" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -22,13 +23,26 @@
                 <th>Nazwisko</th>
                 <th>Email</th>
             </tr>
-        <c:forEach items="${personList}" var="person">
+        <c:forEach items="${students}" var="student">
             <tr>
-                <td>${person.firstName}</td>
-                <td>${person.lastName}</td>
-                <td>${person.email}</td>
+                <td>${student.firstName}</td>
+                <td>${student.lastName}</td>
+                <td>${student.email}</td>
             </tr>
         </c:forEach>
         </table>
+        
+        <br />
+        <br />
+    
+        <form action='/lab4/students' method='post'>
+            Imię:
+            <input type='text' name='firstName'>
+            Nazwisko:
+            <input type='text' name='lastName'>
+            E-mail:
+            <input type='text' name='email'>
+            <input type='submit'>
+        </form>
     </body>
 </html>

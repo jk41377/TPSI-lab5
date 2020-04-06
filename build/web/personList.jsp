@@ -16,7 +16,7 @@
         }
     </style>
     <body>
-         <table>
+        <table>
             <tr>
                 <th>Imie</th>
                 <th>Nazwisko</th>
@@ -29,6 +29,6 @@
                 <td>${person.email}</td>
             </tr>
         </c:forEach>
-    </table>
+        </table>
     </body>
 </html>
